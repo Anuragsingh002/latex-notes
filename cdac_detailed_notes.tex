@@ -24,7 +24,7 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable,listings}
 \usepackage{fancyhdr}
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
 \usepackage{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,calc,decorations.pathreplacing}
@@ -82,11 +82,11 @@
   {0em}
   {\colorbox{darkblue}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\strut\thesection\enspace\MakeUppercase{#1}}}}
 \titleformat{\subsection}
-  {\large\bfseries\color{darkblue}}{\thesubsection\enspace}{0em}{}
+  {\large\bfseries\color{darkblue}}{\thesubsection\enspace}{0em}{#1}
 \titleformat{\subsubsection}
-  {\normalsize\bfseries\color{medblue}}{\thesubsubsection\enspace}{0em}{}
+  {\normalsize\bfseries\color{medblue}}{\thesubsubsection\enspace}{0em}{#1}
 \titleformat{\paragraph}[runin]
-  {\normalsize\bfseries\color{teal}}{}{0em}{}[:\enspace]
+  {\normalsize\bfseries\color{teal}}{}{0em}{#1}[\;\enspace]
 \titlespacing*{\section}{0pt}{14pt}{6pt}
 \titlespacing*{\subsection}{0pt}{10pt}{3pt}
 \titlespacing*{\subsubsection}{0pt}{7pt}{2pt}
